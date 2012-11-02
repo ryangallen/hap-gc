@@ -20,15 +20,34 @@ h3, h4{
 	margin:.2em 0;	
 }
 
+.right{
+	float:right;
+}
+
+.left{
+	float: left;
+}
+
 #banner{
 	padding:10px;
 	background:#FFCC00;
 	color:white;
+	height: 65px;
 }
 
 #logo a, #logo a:hover{
 	color:#FFF;
 	text-shadow:0 1px 5px #CA9;
+}
+
+#nav{
+	list-style-type: none;
+	color:#444;
+}
+
+#nav li{
+	display: inline;
+	padding-left: 20px;
 }
 
 .wrap{
