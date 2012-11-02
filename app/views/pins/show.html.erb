@@ -5,7 +5,7 @@
     <h4><%= @pin.address %></h4>
     <h4><%= @pin.date.strftime("%B %d, %Y") %> <%= @pin.time.strftime("%H:%M") %></h4>
     <p><%= @pin.desc %></p>
-    
+    <h5>Pinned by: <%= @pin.user.profile_name %></h5>
 </div>
 <div class="wrap">
 	<p>

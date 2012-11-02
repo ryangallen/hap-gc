@@ -7,6 +7,7 @@ gem 'rails', '3.2.1'
 
 gem 'geocoder'
 gem 'devise'
+gem 'simple_form'
 
 group :development, :test do
 	gem 'sqlite3'
