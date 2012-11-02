@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HapGc</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+	<script type="text/javascript"
+		src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC_DBjtJ-HfgZ3VWec9DVJjt21VGmuqgl0&sensor=true">
+	</script>
+	<script type="text/javascript">
+		function initialize() {
+			var mapOptions = {
+				center: new google.maps.LatLng(42.43, -83.05),
+				zoom: 11,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("map_canvas"),
+			mapOptions);
+		}
+	</script>
+</head>
+<body>
+	<div id="banner">
+		<h1 id="logo"><%= link_to 'Happining', pins_path %></h1>
+	</div>
+	<%= yield %>
+</body>
+</html>

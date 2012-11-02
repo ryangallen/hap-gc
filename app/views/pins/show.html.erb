@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<div class="wrap">
+    <h3><%= link_to @pin.name, @pin %></h3>
+    <h4><%= @pin.address %></h4>
+    <h4><%= @pin.date.strftime("%B %d, %Y") %> <%= @pin.time.strftime("%H:%M") %></h4>
+    <p><%= @pin.desc %></p>
+    
+</div>
+<div class="wrap">
+	<p>
+		<%= link_to 'Edit', edit_pin_path(@pin) %> |
+		<%= link_to 'Continue', pins_path %>
+	</p>
+</div>
