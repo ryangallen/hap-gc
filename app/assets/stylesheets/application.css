@@ -1,6 +1,6 @@
 body {
 margin:0;
-  background-color: #fff;
+  background: #F4F4F0;
   color: #333;
   font-family: arial, helvetica, sans-serif;
   font-size: 1em;
@@ -28,6 +28,7 @@ h3, h4{
 
 #logo a, #logo a:hover{
 	color:#FFF;
+	text-shadow:0 1px 5px #CA9;
 }
 
 .wrap{
@@ -55,6 +56,10 @@ h3, h4{
 	position:relative;
 }
 
+#new-pin{
+	width:300px;
+}
+
 #map_canvas {
 	position:absolute;
 	width:100%;
@@ -68,6 +73,7 @@ h3, h4{
 
 #flow{
 	border:solid 1px #FFD52E;
+	width:300px;
 }
 
 .pin{
