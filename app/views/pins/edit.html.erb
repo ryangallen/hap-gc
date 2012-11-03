@@ -1,4 +1,4 @@
-<% if user_signed_in? and user_id == @pin.user_id%>
+<% if user_signed_in? %>
 
 <h1>Editing pin</h1>
 
@@ -7,5 +7,5 @@
 <%= link_to 'Show', @pin %> |
 <%= link_to 'Back', root_url %>
 <% else %>
-	<h1>You can't edit this pin.</h1>
+	<h1>You need to sign in.</h1>
 <% end %>
