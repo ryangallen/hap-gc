@@ -14,7 +14,7 @@
   <table>
     <tr>
       <td><h4><%= f.label :category %></h4></td>
-      <td><%= f.text_field :category %></td>
+      <td><%= f.select :category, options_for_select([["Event", ""], "Job/Project", "Product"]) %></td>
     </tr>
     <tr>
       <td><h4><%= f.label :name %></h4></td>

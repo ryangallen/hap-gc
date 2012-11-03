@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121102025419) do
+ActiveRecord::Schema.define(:version => 20121103204031) do
 
   create_table "pins", :force => true do |t|
     t.string   "category"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20121102025419) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
+    t.boolean  "gmaps"
   end
 
   add_index "pins", ["user_id"], :name => "index_pins_on_user_id"

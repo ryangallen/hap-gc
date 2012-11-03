@@ -1,6 +1,9 @@
-
-<div class="wrap">
-	<h1>Create a Pin</h1>
-	<%= render 'form' %>
-</div>
+<% if user_signed_in? %>
+	<div class="wrap">
+		<h1>Create a Pin</h1>
+		<%= render 'form' %>
+	</div>
+<% else %>
+	<h1>You need to sign in</h1>
+<% end %>
 

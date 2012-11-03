@@ -6,6 +6,7 @@ class CreatePins < ActiveRecord::Migration
       t.string :address
       t.float :latitude
       t.float :longitude
+      t.boolean :gmaps
       t.date :date
       t.time :time
       t.text :desc

@@ -1,6 +1,11 @@
+<% if user_signed_in? and user_id == @pin.user_id%>
+
 <h1>Editing pin</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @pin %> |
 <%= link_to 'Back', root_url %>
+<% else %>
+	<h1>You can't edit this pin.</h1>
+<% end %>

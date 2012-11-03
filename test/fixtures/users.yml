@@ -1,7 +1,5 @@
 ryan:
-	first_name: 'Ryan'
-	last_name: 'Allen'
-	profile_name: 'RyanGAllen'
-	email: 'allenryan14@gmail.com'
-	password: 'password'
-	password_confirmation: 'password'
+  first_name: 'Ryan'
+  last_name: 'Allen'
+  email: 'allenryan14@gmail.com'
+  profile_name: 'RyanGAllen'

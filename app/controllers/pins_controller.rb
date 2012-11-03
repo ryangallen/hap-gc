@@ -2,11 +2,12 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    if params[:search].present?
-      @pins = Pin.near(params[:search], 30, :order => :distance)
-    else
+    #if params[:search].present?
+      #@pins = Pin.near(params[:search], 30, :order => :distance)
+    #else
       @pins = Pin.all
-    end
+      @json = Pin.all.to_gmaps4rails
+    #end
 
     respond_to do |format|
       format.html # index.html.erb
