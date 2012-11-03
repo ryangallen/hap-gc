@@ -11,11 +11,14 @@
                 <%= submit_tag "Search Near", :name => nil %>
             <% end %>
         </td>
-        <td id="new-pin"><%= link_to 'New Pin', new_pin_path, :class => 'btn' %></td>
+        <td id="new-pin">
+            <% if user_signed_in? %>
+                <%= link_to 'New Pin', new_pin_path, :class => 'btn' %></td>
+            <% end %>
     </tr>
     <tr>
         <td id="board">
-            <div id="map_canvas"></div>
+
         </td>
         <td id="flow">
             <% @pins.each do |pin| %>
@@ -25,8 +28,11 @@
                     <h4><%= pin.date.strftime("%B %d, %Y") %> <%= pin.time.strftime("%H:%M") %></h4>
                     <p><%= pin.desc %></p>
                     <h5>Pinned by: <%= pin.user.profile_name %></h5>
-                    <p><%= link_to 'Edit', edit_pin_path(pin) %> |
-                    <%= link_to 'Delete', pin, confirm: 'Are you sure?', method: :delete %></p>
+                    <% if user_signed_in? %>
+                        <p><%= link_to 'Edit', edit_pin_path(pin) %> |
+                        <%= link_to 'Delete', pin, confirm: 'Are you sure?', method: :delete %></p>
+                    <% end %>
+                    
                 </div>
             <% end %>
         </td>
