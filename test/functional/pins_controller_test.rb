@@ -11,17 +11,23 @@ class PinsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:pins)
   end
 
-  test "should get new" do
+  test "should be redirected when not logged in" do
+    get :new
+    assert_response :redirect
+    assert_redirected_to login_path
+  end
+
+  test "should render the new page when logged in" do
+    sign_in user(:Ryan)
     get :new
     assert_response :success
   end
+
 
   test "should create pin" do
     assert_difference('Pin.count') do
       post :create, pin: @pin.attributes
     end
-
-    assert_redirected_to pin_path(assigns(:pin))
   end
 
   test "should show pin" do

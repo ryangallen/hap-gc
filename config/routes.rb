@@ -1,7 +1,7 @@
 HapGc::Application.routes.draw do
   devise_for :users
   resources :pins
-  get 'board', to: 'pins#index', as: :feed
+  get 'board', to: 'pins#index', as: :board
   root :to => 'pins#index'
 
   devise_scope :user do

@@ -1,4 +1,6 @@
 class PinsController < ApplicationController
+  before_filter :authenticate_user!, only: [:new]
+
   # GET /pins
   # GET /pins.json
   def index
@@ -25,7 +27,6 @@ class PinsController < ApplicationController
       format.json { render json: @pin }
     end
   end
-
   # GET /pins/new
   # GET /pins/new.json
   def new

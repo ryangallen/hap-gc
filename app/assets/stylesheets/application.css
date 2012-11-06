@@ -132,6 +132,10 @@ form{
 	top:1px;
 }
 
+.dialog{
+	background: #FFAA00;color:#FFFFFF;
+}
+
 /*gmaps for rails*/
 #map_canvas {
 	position:absolute;
