@@ -1,7 +1,7 @@
 <%= simple_form_for(@pin) do |f| %>
   <% if @pin.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
+    <div id="error_explanation" class="alert alert-error">
+      <h3><%= pluralize(@pin.errors.count, "fup") %>:</h3>
 
       <ul>
       <% @pin.errors.full_messages.each do |msg| %>
@@ -14,7 +14,7 @@
   <table>
     <tr>
       <td><h4><%= f.label :category %></h4></td>
-      <td><%= f.select :category, options_for_select([["Event", ""], "Job/Project", "Product"]) %></td>
+      <td><%= f.select :category, options_for_select([["Select Category", ""],"Event", "Job/Project", "Product"]) %></td>
     </tr>
     <tr>
       <td><h4><%= f.label :name %></h4></td>

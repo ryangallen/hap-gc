@@ -1,8 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<div>
+<form><div>
     <h3><%= link_to @pin.name, @pin %></h3>
     <h4><%= @pin.address %></h4>
+    <p><%= @pin.latitude %>, <%= @pin.longitude %></p>
     <h4><%= @pin.date.strftime("%B %d, %Y") %> <%= @pin.time.strftime("%H:%M") %></h4>
     <p><%= @pin.desc %></p>
     <h5>Pinned by: <%= @pin.user.profile_name %></h5>
@@ -13,3 +12,4 @@
 		<%= link_to 'Continue', root_url %>
 	</p>
 </div>
+</form>
