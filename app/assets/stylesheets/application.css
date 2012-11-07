@@ -153,15 +153,6 @@ form{
   height: 600px;
 }
 
-.bing_map {
-   position: absolute;
-   top: 20;
-   left: 10;
-   width: 400px;
-   height: 100%;
-   border:#555555 2px solid;
-}
-
 /*Twitter bootstrap alerts*/
 .alert {
   padding: 8px 35px 8px 14px;
