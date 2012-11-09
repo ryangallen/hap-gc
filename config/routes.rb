@@ -1,4 +1,6 @@
 HapGc::Application.routes.draw do
+  get "profiles/show"
+
   devise_for :users
   resources :pins
   get 'board', to: 'pins#index', as: :board
