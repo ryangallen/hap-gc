@@ -4,12 +4,8 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    #if params[:search].present?
-      #@pins = Pin.near(params[:search], 30, :order => :distance)
-    #else
-      @pins = Pin.all
-      @json = Pin.all.to_gmaps4rails
-    #end
+    @pins = Pin.all
+    @json = Pin.all.to_gmaps4rails
 
     respond_to do |format|
       format.html # index.html.erb
@@ -27,6 +23,7 @@ class PinsController < ApplicationController
       format.json { render json: @pin }
     end
   end
+  
   # GET /pins/new
   # GET /pins/new.json
   def new
