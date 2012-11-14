@@ -1,3 +1,15 @@
 <div class="header">
 	<h1><%= @user.profile_name %></h1>
 </div>
+<div id="flow">
+	<% if @pins %>
+		<% @pins.each do |pin| %>
+			<div class="pin">
+		        <h3><%= link_to pin.name, pin %></h3>
+		        <h4><%= pin.address %></h4>
+		        <h4><%= pin.date.strftime("%B %d, %Y") %> <%= pin.time.strftime("%H:%M") %></h4>
+		        <p><%= pin.desc_short %></p>
+			</div>
+		<% end %>
+	<% end %>
+</div>

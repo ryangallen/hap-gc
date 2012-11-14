@@ -23,7 +23,7 @@ class Pin < ActiveRecord::Base
 	  address
 	end
 
-	  def desc_short
-	  	desc[0..199] + "..."
-	  end
+	def desc_short
+		desc[0..199] + "..."
+	end
 end

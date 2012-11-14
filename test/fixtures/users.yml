@@ -2,4 +2,10 @@ Ryan:
   first_name: 'Ryan'
   last_name: 'Allen'
   email: 'allenryan14@gmail.com'
-  profile_name: 'RyanGAllen'
+  profile_name: 'ryangallen'
+
+Kate:
+  first_name: 'Kate'
+  last_name: 'Fodera'
+  email: 'kate.fodera@gmail.com'
+  profile_name: 'Foderak'

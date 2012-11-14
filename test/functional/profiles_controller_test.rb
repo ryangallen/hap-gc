@@ -17,4 +17,11 @@ class ProfilesControllerTest < ActionController::TestCase
   	assert assigns(:user)
   	assert_not_empty assigns(:pins)
   end
+
+  test "only shows the correct user's pins on profile page" do
+    get :show, id: users(:Ryan).profile_name
+    assigns(:pins).each do |pin|
+      assert_equal users(:Ryan), pin.user
+    end
+  end
 end
