@@ -27,13 +27,14 @@
                     <h4><%= pin.address %></h4>
                     <h4><%= pin.date.strftime("%B %d, %Y") %> <%= pin.time.strftime("%H:%M") %></h4>
                     <p><%= pin.desc_short %></p>
+                    <h4 style="text-align:right;"><%= pin.user.profile_name %><%= image_tag pin.user.gravurl %></h4>
 
-                    <% if user_signed_in? %>
-                    <!-- <p>
-                        <%#= link_to 'Edit', edit_pin_path(pin) %> |
-                        <%#= link_to 'Delete', pin, confirm: 'Are you sure?', method: :delete %>
-                    </p> -->
-                    <% end %>
+                    <!--<#% if user_signed_in? %>
+                    <p>
+                        <#%= link_to 'Edit', edit_pin_path(pin) %> |
+                        <#%= link_to 'Delete', pin, confirm: 'Are you sure?', method: :delete %>
+                    </p>
+                    <#% end %>-->
                 </div>
             <% end %>
         </td>
